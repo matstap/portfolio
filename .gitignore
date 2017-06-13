@@ -1,19 +1,13 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
-[Oo]bj/ # FlashDevelop obj
-[Bb]in/ # FlashDevelop bin
+# Logs
+logs
+*.log
 
-# Other files and folders
-.settings/
+# Mac
+.DS_Store
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Secrets
+githubToken.js
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
