@@ -9,13 +9,13 @@ body {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   text-decoration: underline;
   margin-bottom: 1em;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 a, a:link, a:active {
@@ -47,7 +47,7 @@ header ul li {
   float: right;
 }
 
-main, section {
+main, section, footer {
   margin-top: 3em;
 }
 
@@ -88,4 +88,20 @@ section {
 
 .proj-text p {
   margin-top: 10%;
+}
+
+.skill-list {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  list-style: circle;
+  list-style-position: inside;
+}
+
+footer {
+  background-color: #d7d7d7;
+  height: 4em;
+}
+
+footer h4 {
+  padding: 1.5em;
 }
