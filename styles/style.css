@@ -4,12 +4,14 @@ body {
   font-family: helvetica, sans-serif;
   font-size: 100%;
   width: 80%;
+  min-width: 340px;
   margin: 0 auto;
 }
 
 h2 {
   font-size: 1.5em;
   text-decoration: underline;
+  margin-bottom: 1em;
 }
 
 p {
@@ -49,6 +51,27 @@ main, section {
   margin-top: 3em;
 }
 
+section {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
 .top-pics img{
+  width: 100%;
+}
+
+
+.projects > div {
+  display: inline-block;
+  margin-right: 10%;
+  width: 25%;
+  min-width: 305px;
+}
+
+.projects > div:last-child {
+  margin-right: 0;
+}
+
+.proj-pic {
   width: 100%;
 }
