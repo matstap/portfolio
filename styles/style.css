@@ -3,7 +3,7 @@
 body {
   font-family: helvetica, sans-serif;
   font-size: 100%;
-  width: 80%;
+  /*width: 70%;*/
   min-width: 340px;
   margin: 0 auto;
 }
@@ -37,14 +37,19 @@ header {
   height: 4em;
 }
 
+.icon-menu {
+  float: right;
+  font-size: 2.5em;
+  margin-right: .3em;
+}
+
 header h3 {
   padding: 1.5em;
   float: left;
 }
 
-header ul li {
-  padding: 1.5em;
-  float: right;
+header ul {
+  display: none;
 }
 
 main, section, footer {
@@ -104,4 +109,27 @@ footer {
 
 footer h4 {
   padding: 1.5em;
+}
+
+/*state*/
+
+.icon-menu:hover + ul{
+  display: block;
+}
+
+/*Modules*/
+
+@media only screen and (min-width: 640px) {
+  header ul {
+    display: block;
+  }
+
+  header ul li {
+    padding: 1.5em;
+    float: right;
+  }
+
+  .icon-menu {
+    display: none;
+  }
 }
