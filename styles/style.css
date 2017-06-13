@@ -1,0 +1,23 @@
+/*Base styles*/
+
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 100%;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1em;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
