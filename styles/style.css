@@ -63,9 +63,10 @@ section {
 
 .projects > div {
   display: inline-block;
-  margin-right: 10%;
+  margin-right: 12%;
   width: 25%;
   min-width: 305px;
+  position: relative;
 }
 
 .projects > div:last-child {
@@ -74,4 +75,17 @@ section {
 
 .proj-pic {
   width: 100%;
+}
+
+.proj-text {
+  position: absolute;
+  background-color: rgba(0,0,0,0.2);
+  text-align: center;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+}
+
+.proj-text p {
+  margin-top: 10%;
 }
