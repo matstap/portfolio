@@ -113,7 +113,7 @@ footer h4 {
 
 /*state*/
 
-.icon-menu:hover + ul{
+ul.clicked {
   display: block;
 }
 
