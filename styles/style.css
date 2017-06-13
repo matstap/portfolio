@@ -3,6 +3,8 @@
 body {
   font-family: helvetica, sans-serif;
   font-size: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -20,4 +22,33 @@ a, a:link, a:active {
 
 img {
   max-width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/*Layout*/
+
+header {
+  background-color: #d7d7d7;
+  height: 4em;
+}
+
+header h3 {
+  padding: 1.5em;
+  float: left;
+}
+
+header ul li {
+  padding: 1.5em;
+  float: right;
+}
+
+main, section {
+  margin-top: 3em;
+}
+
+.top-pics img{
+  width: 100%;
 }
