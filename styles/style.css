@@ -65,17 +65,16 @@ section {
   width: 100%;
 }
 
-
 .projects > div {
-  display: inline-block;
-  margin-right: 12%;
-  width: 25%;
-  min-width: 305px;
+  min-width: 200px;
   position: relative;
+  width: 90%;
+  min-width: 305px;
+  margin: 5%;
 }
 
 .projects > div:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .proj-pic {
@@ -131,5 +130,18 @@ ul.clicked {
 
   .icon-menu {
     display: none;
+  }
+
+  .projects > div {
+    display: inline-block;
+    margin-right: 12%;
+    margin-left: 0;
+    width: 25%;
+    min-width: 160px;
+    position: relative;
+  }
+
+  .projects > div:last-child {
+    margin-right: 0;
   }
 }
