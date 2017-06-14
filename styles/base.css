@@ -83,34 +83,38 @@ section {
   width: 100%;
 }
 
-.projects > div {
-  min-width: 200px;
-  position: relative;
-  width: 90%;
-  min-width: 305px;
-  margin: 5%;
-}
-
-.projects > div:last-child {
-  margin-bottom: 0;
-}
-
-.proj-pic {
+.projects {
+  /*position: relative;*/
   width: 100%;
+  min-width: 300px;
+  margin-left: 0;
+  margin-bottom: 10%;
 }
 
-.proj-text {
+/*.projects > div:last-child {
+  margin-bottom: 0;
+}*/
+
+.template {
+  display: none;
+}
+
+/*.proj-pic {
+  width: 100%;
+}*/
+
+/*.proj-text {
   position: absolute;
   background-color: rgba(0,0,0,0.2);
   text-align: center;
   height: 40%;
   width: 100%;
   bottom: 0;
-}
+}*/
 
-.proj-text p {
+/*.proj-text p {
   margin-top: 10%;
-}
+}*/
 
 .skill-list {
   font-size: 1.5em;

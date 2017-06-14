@@ -14,16 +14,21 @@
     display: none;
   }
 
-  .projects > div {
+  .projects {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    width: auto;
+  }
+
+  /*.projects > div {
     display: inline-block;
     margin-right: 12%;
     margin-left: 0;
     width: 25%;
     min-width: 160px;
-    position: relative;
   }
 
   .projects > div:last-child {
     margin-right: 0;
-  }
+  }*/
 }
