@@ -53,6 +53,21 @@ header ul {
 
 .nav {
   display: none;
+  background: rgba(0,0,0,.8);
+  height: 93%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+
+.nav ul li a {
+  font-family: helvetica, sans-serif;
+  font-size: 3.5em;
+  text-decoration: none;
+  color: white;
+  line-height: 3.5em;
+  margin-left: 0.3em;
 }
 
 main, section, footer {
