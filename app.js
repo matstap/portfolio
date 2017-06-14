@@ -10,5 +10,5 @@ function Project(url, name, date, about, tools, collabs){
 }
 
 $('.icon-menu').click(function() {
-  $('#nav').toggleClass('clicked');
+  $('.nav').toggleClass('clicked');
 });
