@@ -9,14 +9,6 @@ function Project(url, name, date, about, tools, collabs){
   this.collabs = collabs;
 }
 
-$(document).ready(function() {
-  $('.icon-menu').click(function() {
-    if ($(this).hasClass('clicked')) {
-      $(this).removeClass('clicked');
-      $('#nav').removeClass('clicked')
-    } else {
-      $(this).addClass('clicked');
-      $('#nav').addClass('clicked');
-    }
-  });
+$('.icon-menu').click(function() {
+  $('#nav').toggleClass('clicked');
 });
