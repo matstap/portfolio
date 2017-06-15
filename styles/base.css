@@ -91,30 +91,9 @@ section {
   margin-bottom: 10%;
 }
 
-/*.projects > div:last-child {
-  margin-bottom: 0;
-}*/
-
 .template {
   display: none;
 }
-
-/*.proj-pic {
-  width: 100%;
-}*/
-
-/*.proj-text {
-  position: absolute;
-  background-color: rgba(0,0,0,0.2);
-  text-align: center;
-  height: 40%;
-  width: 100%;
-  bottom: 0;
-}*/
-
-/*.proj-text p {
-  margin-top: 10%;
-}*/
 
 .skill-list {
   font-size: 1.5em;
