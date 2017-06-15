@@ -12,7 +12,6 @@ function Project(rawData){
 
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
-
   $newProject.removeClass('template');
 
   $newProject.find('h1 a').html(this.title);
