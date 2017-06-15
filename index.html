@@ -4,8 +4,9 @@
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial=1.0">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/states.css">
+    <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
   </head>
 
@@ -14,17 +15,17 @@
       <h3>Matthew Staples</h3>
       <span class="icon-menu"></span>
       <ul>
-        <li><a href="#">Projects</a></li>
-        <li><a href="https://github.com/matstap">Github</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#" target="_blank">Projects</a></li>
+        <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
+        <li><a href="#" target="_blank">About</a></li>
       </ul>
     </header>
 
     <div class="nav">
       <ul>
-        <li><a href="#">Projects</a></li>
-        <li><a href="https://github.com/matstap">Github</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#" target="_blank">Projects</a></li>
+        <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
+        <li><a href="#" target="_blank">About</a></li>
       </ul>
     </div>
 
@@ -35,21 +36,18 @@
         <img src="http://placehold.it/960x540">
       </section>
 
-      <section class="projects">
-        <h2>Projects</h2>
-        <div>
-          <img class="proj-pic" src="http://placehold.it/300x300">
-          <div class="proj-text"><p>Project Title</p></div>
-        </div>
-        <div>
-          <img class="proj-pic" src="http://placehold.it/300x300">
-          <div class="proj-text"><p>Project Title</p></div>
-        </div>
-        <div>
-          <img class="proj-pic" src="http://placehold.it/300x300">
-          <div class="proj-text"><p>Project Title</p></div>
-        </div>
-      </section>
+    <section class="projects">
+      <article class="template">
+        <header>
+          <h1><a href="" target="_blank">Title</a></h1>
+          <div class="byline">
+            Collaborators: <span>Collaborators</span>
+            last modified <time pubdate datetime="2000-01-01">date</time>
+          </div>
+        </header>
+        <section class="article-body"></section>
+      </article>
+    </section>
 
       <section class="skills">
         <h2>Skills</h2>
@@ -81,5 +79,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="app.js"></script>
+    <script src="project-objects.js"></script>
+    <script src="article.js"></script>
   </body>
 </html>

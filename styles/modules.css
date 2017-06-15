@@ -1,0 +1,22 @@
+/*Modules*/
+
+@media only screen and (min-width: 640px) {
+  header ul {
+    display: block;
+  }
+
+  header ul li {
+    padding: 1.5em;
+    float: right;
+  }
+
+  .icon-menu {
+    display: none;
+  }
+
+  .projects {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    width: auto;
+  }
+}
