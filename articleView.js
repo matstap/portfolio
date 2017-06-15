@@ -1,7 +1,7 @@
 'use strict';
 
 function handleTabs() {
-  $('.top-header .tab:first, .nav .tab:first').click(function() {
+  $('.top-header .tab:first, .top-header li:first, .nav .tab:first').click(function() {
     $('#proj').show();
     $('#about').hide();
     if($(window).width() < 640) {
