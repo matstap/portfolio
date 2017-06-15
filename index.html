@@ -11,21 +11,21 @@
   </head>
 
   <body>
-    <header>
-      <h3 class="tab" data-content="articles"><a href="#" target="_blank">Matthew Staples</a></h3>
+    <header class="top-header">
+      <h3 class="tab" data-content="articles"><a href="#">Matthew Staples</a></h3>
       <span class="icon-menu"></span>
       <ul>
-        <li class="tab" data-content="about"><a href="#" target="_blank">Projects</a></li>
+        <li><a href="#" target="_blank">Projects</a></li>
         <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
-        <li><a href="#" target="_blank">About</a></li>
+        <li class="tab" data-content="about"><a href="#">About</a></li>
       </ul>
     </header>
 
     <div class="nav">
       <ul>
-        <li><a href="#" target="_blank">Projects</a></li>
+        <li><a href="#">Projects</a></li>
         <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
-        <li><a href="#" target="_blank">About</a></li>
+        <li class="tab" data-content="about"><a href="#">About</a></li>
       </ul>
     </div>
 
@@ -35,20 +35,20 @@
       <section id="articles" class="tab-content">
         <div class="top-pics">
           <img src="http://placehold.it/960x540">
-        </section>
+        </div>
 
-      <section class="projects">
-        <article class="template">
-          <header>
-            <h1><a href="" target="_blank">Title</a></h1>
-            <div class="byline">
-              Collaborators: <span>Collaborators</span>
-              last modified <time pubdate datetime="2000-01-01">date</time>
-            </div>
-          </header>
-          <section class="article-body"></section>
-        </article>
-      </section>
+        <section class="projects">
+          <article class="template">
+            <header>
+              <h1><a href="" target="_blank">Title</a></h1>
+              <div class="byline">
+                Collaborators: <span>Collaborators</span>
+                last modified <time pubdate datetime="2000-01-01">date</time>
+              </div>
+            </header>
+            <section class="article-body"></section>
+          </article>
+        </section>
 
         <section class="skills">
           <h2>Skills</h2>
@@ -83,5 +83,6 @@
     <script src="app.js"></script>
     <script src="project-objects.js"></script>
     <script src="article.js"></script>
+    <script src="articleView.js"></script>
   </body>
 </html>
