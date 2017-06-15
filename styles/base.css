@@ -79,6 +79,15 @@ section {
   margin-right: 1.5em;
 }
 
+#proj {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#about {
+  display: none;
+}
+
 .top-pics img{
   width: 100%;
 }
