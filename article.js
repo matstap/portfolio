@@ -11,7 +11,13 @@ function Project(rawData){
 }
 
 Project.prototype.toHtml = function() {
-  
+  var template = $('#proj-template').html();
+  var templateRender = Handlebars.compile(template);
+
+  this.daysAgo = parseInt((new Date() - new Date(this.lastDate))/60/60/24/1000);
+  this.publishStatus = this.lastDate ? `published ${this.daysAgo} days ago` : '(draft)';
+
+  return templateRender(this);
 
   // var $newProject = $('article.template').clone();
   // $newProject.removeClass('template');
@@ -37,5 +43,5 @@ rawData.forEach(function(projObj) {
 });
 
 projects.forEach(function(project) {
-  $('.projects').append(project.toHtml());
+  $('#proj').append(project.toHtml());
 });
