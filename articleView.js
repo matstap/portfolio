@@ -1,21 +1,15 @@
 'use strict';
 
 function handleTabs() {
-  $('.top-header .tab:first, .top-header li:first, .nav .tab:first').click(function() {
-    $('#proj').show();
-    $('#about').hide();
+  $('.top-header, .nav').on('click', '.tab', function() {
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).fadeIn();
     if($(window).width() < 640) {
       $('.nav').toggleClass('clicked');
     }
   });
 
-  $('.top-header .tab:last, .nav .tab:last').click(function() {
-    $('#proj').hide();
-    $('#about').show();
-    if($(window).width() < 640) {
-      $('.nav').toggleClass('clicked');
-    }
-  });
+  $('.main-nav .tab:first').click();
 }
 
 $(document).ready(function() {
