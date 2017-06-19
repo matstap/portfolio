@@ -2,7 +2,6 @@
 
 body {
   font-family: helvetica, sans-serif;
-  font-size: 100%;
   min-width: 340px;
   margin: 0 auto;
 }
@@ -19,10 +18,7 @@ p {
 
 a, a:link, a:active {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
+  color: #000;
 }
 
 .clearfix {
@@ -40,6 +36,10 @@ header {
   float: right;
   font-size: 2.5em;
   margin-right: .3em;
+}
+
+header {
+  font-size: 1.5em;
 }
 
 header h3 {
@@ -85,6 +85,15 @@ section {
   margin-left: 0;
 }
 
+.projects header {
+  padding: 12px;
+  height: auto;
+}
+
+.projects header span {
+  display: block;
+}
+
 .skill-list {
   font-size: 1.5em;
   line-height: 1.5em;
@@ -99,4 +108,13 @@ footer {
 
 footer h4 {
   padding: 1.5em;
+  /*display: inline-block;*/
+  float:left;
+}
+
+footer ul li {
+  padding-top: 1em;
+  padding-right: 1em;
+  float: right;
+  font-size: 1.5em;
 }
