@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="styles/states.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
+
+    <script id="proj-template" type="text/x-handlebars-template">
+      <section class="projects">
+        <article>
+          <header>
+            <h1><a href="" target="_blank">{{title}}</a></h1>
+            <div class="byline">
+              Collaborators: <span>{{collabs}}</span>
+              last modified <time pubdate datetime="2000-01-01">{{lastDate}}</time>
+            </div>
+          </header>
+          <section class="article-body">{{{body}}}</section>
+        </article>
+      </section>
+    </script>
   </head>
 
   <body>
@@ -38,19 +53,6 @@
         <div class="top-pics">
           <img src="http://placehold.it/960x540">
         </div>
-
-        <section class="projects">
-          <article class="template">
-            <header>
-              <h1><a href="" target="_blank">Title</a></h1>
-              <div class="byline">
-                Collaborators: <span>Collaborators</span>
-                last modified <time pubdate datetime="2000-01-01">date</time>
-              </div>
-            </header>
-            <section class="article-body"></section>
-          </article>
-        </section>
       </section>
 
       <section id="skills" class="tab-content">
@@ -82,6 +84,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
     <script src="app.js"></script>
     <script src="project-objects.js"></script>
     <script src="article.js"></script>
