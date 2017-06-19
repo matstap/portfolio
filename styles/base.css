@@ -79,25 +79,11 @@ section {
   margin-right: 1.5em;
 }
 
-#proj {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.top-pics img{
-  width: 100%;
-}
-
 .projects {
-  /*position: relative;*/
   width: 100%;
   min-width: 300px;
   margin-left: 0;
   margin-bottom: 10%;
-}
-
-.template {
-  display: none;
 }
 
 .skill-list {
