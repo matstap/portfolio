@@ -23,6 +23,16 @@ Project.prototype.toHtml = function() {
   // return template(this);
 };
 
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.lastDate)) - (new Date(a.lastDate));
+  });
+
+  rawData.forEach(function(projObj) {
+    Project.all.push(new Project(projObj));
+  });
+};
+
 Project.fetchAll = function() {
   if (localStorage.rawData) {
     Project.loadAll(JSON.parse(localStorage.rawData));
@@ -37,13 +47,8 @@ Project.fetchAll = function() {
   }
 };
 
-// rawData.sort(function(a,b) {
-//   return (new Date(b.lastDate)) - (new Date(a.lastDate));
-// });
-//
-// rawData.forEach(function(projObj) {
-//   projects.push(new Project(projObj));
-// });
+
+
 //
 // projects.forEach(function(project) {
 //   $('#proj').append(project.toHtml());
