@@ -23,14 +23,28 @@ Project.prototype.toHtml = function() {
   // return template(this);
 };
 
-rawData.sort(function(a,b) {
-  return (new Date(b.lastDate)) - (new Date(a.lastDate));
-});
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    // initialize index page
+  } else {
+    $.getJSON('data/projects.json')
+    .then(function(data) {
+      localStorage.rawData = JSON.stringify(data);
+      Project.loadAll(data);
+      // initialize index page
+    });
+  }
+};
 
-rawData.forEach(function(projObj) {
-  projects.push(new Project(projObj));
-});
-
-projects.forEach(function(project) {
-  $('#proj').append(project.toHtml());
-});
+// rawData.sort(function(a,b) {
+//   return (new Date(b.lastDate)) - (new Date(a.lastDate));
+// });
+//
+// rawData.forEach(function(projObj) {
+//   projects.push(new Project(projObj));
+// });
+//
+// projects.forEach(function(project) {
+//   $('#proj').append(project.toHtml());
+// });
