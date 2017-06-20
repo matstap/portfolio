@@ -26,13 +26,13 @@ Project.prototype.toHtml = function() {
 Project.fetchAll = function() {
   if (localStorage.rawData) {
     Project.loadAll(JSON.parse(localStorage.rawData));
-    // initialize index page
+    articleView.initIndex();
   } else {
     $.getJSON('data/projects.json')
     .then(function(data) {
       localStorage.rawData = JSON.stringify(data);
       Project.loadAll(data);
-      // initialize index page
+      articleView.initIndex();
     });
   }
 };
