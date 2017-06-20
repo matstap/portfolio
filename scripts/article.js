@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Project(rawData){
   this.url = rawData.url;
   this.title = rawData.title;
@@ -10,38 +8,55 @@ function Project(rawData){
   this.collabs = rawData.collabs;
 }
 
+Project.all = [];
+
 Project.prototype.toHtml = function() {
-  var template = $('#proj-template').html();
+  // let template = Handlebars.compile($('#proj-template').text());
+  var template = $('#proj-template').text();
   var templateRender = Handlebars.compile(template);
 
   this.daysAgo = parseInt((new Date() - new Date(this.lastDate))/60/60/24/1000);
   this.publishStatus = this.lastDate ? `published ${this.daysAgo} days ago` : '(draft)';
+  this.body = marked(this.body);
 
   return templateRender(this);
-
-  // var $newProject = $('article.template').clone();
-  // $newProject.removeClass('template');
-  //
-  // $newProject.find('h1 a').html(this.title);
-  // $newProject.find('h1 a').attr('href', this.url);
-  // console.log(this.url);
-  // $newProject.find('.byline span').html(this.collabs);
-  // $newProject.find('.article-body').html(this.body);
-  // $newProject.find('time').attr('pubdate', this.lastDate);
-  //
-  // $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.lastDate))/60/60/24/1000) + ' days ago');
-  // $newProject.append('<hr>');
-  // return $newProject;
 };
 
-rawData.sort(function(a,b) {
-  return (new Date(b.lastDate)) - (new Date(a.lastDate));
-});
+Project.loadAll = function(rawData) {
+  rawData.sort(function(a,b) {
+    return (new Date(b.lastDate)) - (new Date(a.lastDate));
+  });
 
-rawData.forEach(function(projObj) {
-  projects.push(new Project(projObj));
-});
+  rawData.forEach(function(projObj) {
+    Project.all.push(new Project(projObj));
+  });
+};
 
-projects.forEach(function(project) {
-  $('#proj').append(project.toHtml());
-});
+Project.fetchAll = function() {
+  var eTag;
+
+  $.ajax({
+    url: '/data/projects.json',
+    type: 'HEAD',
+    success: function(data, message, xhr) {
+      eTag = xhr.getResponseHeader('eTag');
+      console.log(xhr);
+    },
+    fail: function(err) {
+      console.error('Broke because:', err);
+    }
+  });
+
+  if (localStorage.rawData && localStorage.eTag === eTag) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    articleView.initIndex();
+  } else {
+    $.getJSON('data/projects.json')
+    .then(function(data) {
+      localStorage.rawData = JSON.stringify(data);
+      localStorage.eTag = eTag;
+      Project.loadAll(data);
+      articleView.initIndex();
+    });
+  }
+};

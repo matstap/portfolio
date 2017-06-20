@@ -1,6 +1,8 @@
 'use strict';
 
-function handleTabs() {
+var articleView = {};
+
+articleView.handleTabs = function() {
   $('.tab').click(function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
@@ -13,8 +15,11 @@ function handleTabs() {
     $('main section').hide();
     $('main section').fadeIn();
   });
-}
+};
 
-$(document).ready(function() {
-  handleTabs();
-});
+articleView.initIndex = function() {
+  Project.all.forEach(function(project) {
+    $('#proj').append(project.toHtml());
+  });
+  articleView.handleTabs();
+};
