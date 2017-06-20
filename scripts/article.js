@@ -20,7 +20,6 @@ Project.prototype.toHtml = function() {
   this.body = marked(this.body);
 
   return templateRender(this);
-  // return template(this);
 };
 
 Project.loadAll = function(rawData) {
@@ -34,22 +33,30 @@ Project.loadAll = function(rawData) {
 };
 
 Project.fetchAll = function() {
-  if (localStorage.rawData) {
+  var eTag;
+
+  $.ajax({
+    url: '/data/projects.json',
+    type: 'HEAD',
+    success: function(data, message, xhr) {
+      eTag = xhr.getResponseHeader('eTag');
+      console.log(xhr);
+    },
+    fail: function(err) {
+      console.error('Broke because:', err);
+    }
+  });
+
+  if (localStorage.rawData && localStorage.eTag === eTag) {
     Project.loadAll(JSON.parse(localStorage.rawData));
     articleView.initIndex();
   } else {
     $.getJSON('data/projects.json')
     .then(function(data) {
       localStorage.rawData = JSON.stringify(data);
+      localStorage.eTag = eTag;
       Project.loadAll(data);
       articleView.initIndex();
     });
   }
 };
-
-
-
-//
-// projects.forEach(function(project) {
-//   $('#proj').append(project.toHtml());
-// });

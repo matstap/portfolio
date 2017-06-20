@@ -23,7 +23,3 @@ articleView.initIndex = function() {
   });
   articleView.handleTabs();
 };
-
-// $(document).ready(function() {
-//   handleTabs();
-// });
