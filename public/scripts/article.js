@@ -47,13 +47,13 @@ Project.fetchAll = function() {
     }
   });
 
-  if (localStorage.rawData && localStorage.eTag === eTag) {
-    Project.loadAll(JSON.parse(localStorage.rawData));
+  if (localStorage.projData && localStorage.eTag === eTag) {
+    Project.loadAll(JSON.parse(localStorage.projData));
     articleView.initIndex();
   } else {
     $.getJSON('data/projects.json')
     .then(function(data) {
-      localStorage.rawData = JSON.stringify(data);
+      localStorage.projData = JSON.stringify(data);
       localStorage.eTag = eTag;
       Project.loadAll(data);
       articleView.initIndex();
