@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matstap/portfolio.git"
+  },
+  "author": "Matthew Staples",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matstap/portfolio/issues"
+  },
+  "homepage": "https://github.com/matstap/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
