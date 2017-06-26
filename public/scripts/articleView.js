@@ -20,11 +20,9 @@ var app = app || {};
   };
 
   articleView.initIndex = function() {
-    // Project.all.forEach(function(project) {
-    //   $('#proj').append(project.toHtml());
-    // });
     app.Project.all.forEach(project => $('#proj').append(project.toHtml()));
     articleView.handleTabs();
+    $('#proj .number').text(`${app.Project.numCollabs()} collaborators`);
   };
 
   module.articleView = articleView;

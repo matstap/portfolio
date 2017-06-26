@@ -27,10 +27,6 @@ var app = app || {};
     data.map(ele => Project.all.push(new Project(ele)));
   };
 
-  Project.numProj = () => {
-    Project.all.map(() => 1).reduce((acc, cur) => acc + cur);
-  };
-
   Project.fetchAll = function() {
     var eTag;
 
@@ -59,5 +55,11 @@ var app = app || {};
       });
     }
   };
+
+  Project.numCollabs = () =>
+    app.Project.all.map(p => p.collabs.split(',').length)
+    .reduce((acc, cur) => (cur > 1) ? acc + cur : 0);
+
+
   module.Project = Project;
 })(app);
