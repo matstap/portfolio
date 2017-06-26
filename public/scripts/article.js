@@ -11,25 +11,18 @@ function Project(rawData){
 Project.all = [];
 
 Project.prototype.toHtml = function() {
-  // let template = Handlebars.compile($('#proj-template').text());
-  var template = $('#proj-template').text();
-  var templateRender = Handlebars.compile(template);
+  let template = Handlebars.compile($('#proj-template').text());
 
   this.daysAgo = parseInt((new Date() - new Date(this.lastDate))/60/60/24/1000);
   this.publishStatus = this.lastDate ? `published ${this.daysAgo} days ago` : '(draft)';
   this.body = marked(this.body);
 
-  return templateRender(this);
+  return template(this);
 };
 
-Project.loadAll = function(rawData) {
-  rawData.sort(function(a,b) {
-    return (new Date(b.lastDate)) - (new Date(a.lastDate));
-  });
-
-  rawData.forEach(function(projObj) {
-    Project.all.push(new Project(projObj));
-  });
+Project.loadAll = rows => {
+  rows.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
+  rows.map(ele => Project.all.push(new Project(ele)));
 };
 
 Project.fetchAll = function() {
