@@ -1,5 +1,6 @@
 /*Base styles*/
 
+
 body {
   font-family: helvetica, sans-serif;
   min-width: 340px;
@@ -29,7 +30,7 @@ a, a:link, a:active {
 
 header {
   background-color: #d7d7d7;
-  height: 4em;
+  height: 10vh;
 }
 
 .icon-menu {
@@ -43,8 +44,11 @@ header {
 }
 
 header h3 {
-  padding: 1.5em;
   float: left;
+  padding: 2vh 0;
+  width: 25vw;
+  margin-left: 2vw;
+  font-size: 4vh
 }
 
 header ul {
@@ -63,7 +67,7 @@ header ul {
 
 .nav ul li a {
   font-family: helvetica, sans-serif;
-  font-size: 3.5em;
+  font-size: 3.5vh;
   text-decoration: none;
   color: white;
   line-height: 2em;
@@ -74,9 +78,22 @@ main, section, footer {
   margin-top: 3em;
 }
 
+main {
+  height: 84vh;
+  overflow-y: scroll;
+}
+
 section {
   margin-left: 1.5em;
   margin-right: 1.5em;
+}
+
+main>section {
+  display: none;
+}
+
+main>section:first-child {
+  display: block;
 }
 
 .projects {
@@ -103,18 +120,18 @@ section {
 
 footer {
   background-color: #d7d7d7;
-  height: 4em;
+  height: 8vh;
 }
 
-footer h4 {
+footer div h4 {
   padding: 1.5em;
   /*display: inline-block;*/
   float:left;
+  font-size: 2vh;
 }
 
-footer ul li {
-  padding-top: 1em;
-  padding-right: 1em;
+footer div ul li {
+  margin: 2.5vh 0.5vw;
   float: right;
-  font-size: 1.5em;
+  font-size: 3vh;
 }
