@@ -7,8 +7,8 @@ var app = app || {};
 
   projController.index = () => {
     $('main > section').hide();
-    $('#articles').show();
-    app.Project.fetchAll();
+    $('#proj').show();
+    // app.Project.fetchAll();
   };
 
   module.projController = projController;
