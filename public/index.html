@@ -51,6 +51,7 @@
     <main>
       <section id="proj" class="tab-content">
         <h2>Projects</h2>
+        <h3 class="number"></h3>
       </section>
 
       <section id="skills" class="tab-content">
@@ -92,7 +93,7 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      Project.fetchAll();
+      app.Project.fetchAll(app.articleView.initIndex);
     </script>
   </body>
 </html>
