@@ -7,8 +7,7 @@ var app = app || {};
   const ui = function() {
     let $proj = $('#proj');
 
-    $proj.find('article').empty();
-    $proj.show().siblings().hide();
+    $proj.find('section').remove();
   };
 
   var render = Handlebars.compile($('#proj-template').text());
