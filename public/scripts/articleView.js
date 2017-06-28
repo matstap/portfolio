@@ -16,7 +16,7 @@ var app = app || {};
     ui();
 
     $('#proj').append(
-      app.Project.with('name').map(render)
+      app.Project.with('stargazers_count').map(render)
     );
   };
 
