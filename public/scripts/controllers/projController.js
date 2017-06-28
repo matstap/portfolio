@@ -8,7 +8,6 @@ var app = app || {};
   projController.index = () => {
     $('main > section').hide();
     $('#proj').show();
-    // app.Project.fetchAll();
     app.Project.requestProject(app.articleView.index);
   };
 
