@@ -83,6 +83,10 @@ main {
   overflow-y: scroll;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 section {
   margin-left: 1.5em;
   margin-right: 1.5em;
