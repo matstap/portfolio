@@ -31,17 +31,17 @@
       <span class="icon-menu"></span>
       <ul>
         <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
-        <li class="tab" data-content="about"><a href="#">About</a></li>
-        <li class="tab" data-content="skills"><a href="#">Skills</a></li>
-        <li class="tab" data-content="proj"><a href="#">Projects</a></li>
+        <li class="tab" data-content="about"><a href="/about">About</a></li>
+        <li class="tab" data-content="skills"><a href="/skills">Skills</a></li>
+        <li class="tab" data-content="proj"><a href="/">Projects</a></li>
       </ul>
     </header>
 
     <div class="nav">
       <ul>
-        <li class="tab" data-content="proj"><a href="#">Projects</a></li>
-        <li class="tab" data-content="skills"><a href="#">Skills</a></li>
-        <li class="tab" data-content="about"><a href="#">About</a></li>
+        <li class="tab" data-content="proj"><a href="/">Projects</a></li>
+        <li class="tab" data-content="skills"><a href="/skills">Skills</a></li>
+        <li class="tab" data-content="about"><a href="/about">About</a></li>
         <li><a href="https://github.com/matstap" target="_blank">Github</a></li>
       </ul>
     </div>
@@ -92,8 +92,11 @@
     <script src="scripts/project-objects.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
-    <script>
-      app.Project.fetchAll(app.articleView.initIndex);
-    </script>
+    <script> app.Project.fetchAll() </script>
+    <script src="vendor/page.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/projController.js"></script>
+    <script src="scripts/controllers/skillsController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>

@@ -24,7 +24,7 @@ var app = app || {};
 
   Project.loadAll = data => {
     data.sort((a,b) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
-    data.map(ele => Project.all.push(new Project(ele)));
+    Project.all = data.map(ele => new Project(ele));
   };
 
   Project.fetchAll = function() {
@@ -35,7 +35,7 @@ var app = app || {};
       type: 'HEAD',
       success: function(data, message, xhr) {
         eTag = xhr.getResponseHeader('eTag');
-        console.log(xhr);
+        // console.log(xhr);
       },
       fail: function(err) {
         console.error('Broke because:', err);
