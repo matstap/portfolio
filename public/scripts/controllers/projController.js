@@ -9,6 +9,7 @@ var app = app || {};
     $('main > section').hide();
     $('#proj').show();
     // app.Project.fetchAll();
+    app.Project.requestProject(app.articleView.index);
   };
 
   module.projController = projController;

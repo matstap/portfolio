@@ -13,13 +13,13 @@
       <section class="projects">
         <article>
           <header>
-            <h1><a href="{{url}}" target="_blank">{{title}}</a></h1>
+            <h1><a href="{{html_url}}" target="_blank">{{name}}</a></h1>
             <div class="byline">
-              <span>Collaborators: {{collabs}}</span>
-              <span>last modified <time pubdate datetime="2000-01-01">{{lastDate}}</time></span>
+              <span>Collaborators: {{collaborators_url}}</span>
+              <span>Last updated: {{updated_at}}</span>
             </div>
           </header>
-          <section class="article-body">{{{body}}}</section>
+          <section class="article-body">{{description}}</section>
         </article>
       </section>
     </script>
@@ -90,9 +90,10 @@
     <script src="vendor/marked.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/project-objects.js"></script>
+    <script src="scripts/githubToken.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
-    <script> app.Project.fetchAll() </script>
+    <!-- <script> app.Project.fetchAll() </script> -->
     <script src="vendor/page.js"></script>
     <script src="scripts/controllers/aboutController.js"></script>
     <script src="scripts/controllers/projController.js"></script>
