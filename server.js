@@ -18,7 +18,7 @@ function proxyGitHub(request, response) {
 
 app.get('/github/*', proxyGitHub);
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
   res.sendFile('./public/index.html');
 });
 
