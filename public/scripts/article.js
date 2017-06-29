@@ -9,7 +9,7 @@ var app = app || {};
   Project.requestProject = function(callback) {
     $.ajax({
       url: 'https://api.github.com/user/repos',
-      headers: token,
+      headers: {'Authorization' : 'token ' + GITHUB_TOKEN},
       success: function(data){
         Project.all = data;
         callback();
