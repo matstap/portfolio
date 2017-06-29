@@ -22,11 +22,6 @@ app.get('*', function(req, res) {
   res.sendFile('./index.html', {root: './public'});
 });
 
-// app.post('/articles', bodyParser, function(req, res) {
-//   console.log(req.body);
-//   res.send('record posted');
-// });
-
 app.listen(PORT, function() {
   console.log(`Currently listening istening on port: ${PORT}`);
 });
