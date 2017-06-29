@@ -19,7 +19,7 @@ function proxyGitHub(request, response) {
 app.get('/github/*', proxyGitHub);
 
 app.get('*', function(req, res) {
-  res.sendFile('./public/index.html');
+  res.sendFile('/public/index.html');
 });
 
 // app.post('/articles', bodyParser, function(req, res) {
